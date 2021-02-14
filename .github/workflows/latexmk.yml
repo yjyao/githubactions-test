@@ -22,4 +22,4 @@ jobs:
           git checkout -b gh-pages
           git add *.pdf
           git commit -m "ci: Update example PDFs."
-          git push
+          git push origin gh-pages
