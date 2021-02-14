@@ -19,8 +19,11 @@ jobs:
       - uses: fregante/setup-git-user@v1
       - name: Upload PDF to examples/
         run: |
-          git checkout -b previews
-          git rebase --onto main
-          git add *.pdf
+          git clone --depth=1 --branch gh-pages git@github.com:yjyao/githubactions-test.git "$GITHUB_WORKSPACE/deploy"
+          for f in *.pdf; do
+            cp "$f" "$GITHUB_WORKSPACE/deploy/$f"
+          done
+          cd "$GITHUB_WORKSPACE/deploy"
+          git add .
           git commit -m "ci: Update example PDFs."
           git push
