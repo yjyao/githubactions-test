@@ -20,6 +20,7 @@ jobs:
       - name: Upload PDF to examples/
         run: |
           git checkout -b gh-pages
+          git pull origin gh-pages
           git add *.pdf
           git commit -m "ci: Update example PDFs."
           git push origin gh-pages
