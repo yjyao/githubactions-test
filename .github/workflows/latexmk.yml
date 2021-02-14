@@ -15,3 +15,9 @@ jobs:
           working_directory:
             examples
           latexmk_use_xelatex: true
+      - name: Upload PDF to artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: |
+            examples/*.pdf
