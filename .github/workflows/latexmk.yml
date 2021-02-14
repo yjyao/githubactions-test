@@ -16,6 +16,7 @@ jobs:
           working_directory:
             examples
           latexmk_use_xelatex: true
+      - uses: fregante/setup-git-user@v1
       - name: Upload PDF to examples/
         run: |
           git add *.pdf
