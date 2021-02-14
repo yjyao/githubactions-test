@@ -16,9 +16,5 @@ jobs:
           working_directory:
             examples
           latexmk_use_xelatex: true
-      - name: Upload PDF to artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: |
-            examples/*.pdf
+      - name: Upload PDF to examples/
+        run: git add *.pdf; git commit -m "ci: Update example PDFs."
