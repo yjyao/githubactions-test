@@ -12,6 +12,7 @@ jobs:
           root_file: |
             file1.tex
             file2.tex
+            file3.tex
           working_directory:
             examples
           latexmk_use_xelatex: true
