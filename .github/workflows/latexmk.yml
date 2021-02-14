@@ -21,3 +21,4 @@ jobs:
         run: |
           git add *.pdf
           git commit -m "ci: Update example PDFs."
+          git push
