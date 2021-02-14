@@ -4,4 +4,4 @@
 
 Test Github Actions to auto build LaTeX documents in post-submit.
 
-Check out compiled PDF previews [here](github.com/yjyao/githubactions-test/tree/gh-pages).
+Check out compiled PDF previews [here](https://github.com/yjyao/githubactions-test/tree/gh-pages).
