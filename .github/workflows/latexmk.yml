@@ -19,8 +19,8 @@ jobs:
       - uses: fregante/setup-git-user@v1
       - name: Upload PDF to examples/
         run: |
-          git checkout -b gh-pages
           git pull origin gh-pages
+          git checkout -b gh-pages
           git add *.pdf
           git commit -m "ci: Update example PDFs."
           git push origin gh-pages
