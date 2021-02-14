@@ -19,6 +19,8 @@ jobs:
       - uses: fregante/setup-git-user@v1
       - name: Upload PDF to examples/
         run: |
+          git checkout -b previews
+          git rebase --onto main
           git add *.pdf
           git commit -m "ci: Update example PDFs."
           git push
