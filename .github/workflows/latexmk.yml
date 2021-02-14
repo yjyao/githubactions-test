@@ -17,4 +17,6 @@ jobs:
             examples
           latexmk_use_xelatex: true
       - name: Upload PDF to examples/
-        run: git add *.pdf; git commit -m "ci: Update example PDFs."
+        run: |
+          git add *.pdf
+          git commit -m "ci: Update example PDFs."
